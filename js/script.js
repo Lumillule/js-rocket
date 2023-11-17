@@ -1,3 +1,7 @@
+setTimeout(function(){
+	location.href = 'rocket.html';
+}, 2000);
+
 //this is how you comment in JS
 
 var doCoolStuff= function () {

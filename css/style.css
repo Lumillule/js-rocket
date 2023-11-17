@@ -1,5 +1,17 @@
 body{
-	background-color: grey;
+	background-color: mediumpurple;
+	text-align: center;
+}
+
+.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 10px;
+	transition: background-color: 300ms;
 }
 
 .cool{

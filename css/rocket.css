@@ -1,11 +1,36 @@
+body{
+	font-family: 'helvetica', 'arial', sans-serif;
+}
+
 .left{
 	position: fixed;
-	background-color: aquamarine;
+	background-color: mediumpurple;
 	width: 50%;
 	height: 100%;
 	top: 0;
 	left: 0;
 }
+
+.interface{
+	text-align: center;
+	margin-top: 320px;
+}
+
+.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 10px;
+	transition: background-color: 300ms;
+}
+
+.button:hover{
+	background-color: cornflowerblue;
+}
+
 
 .right{
 	position: fixed;
@@ -17,24 +42,71 @@
 }
 
 .ground{
-	background-color: green;
+	background: url('../img/ground.png') no-repeat center center;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 20px;
+	height: 300px;
+}
+
+.anxious{
+	position: absolute;
+	bottom: 50px;
+	right: 50%;
+	background: url('../img/anxious.png') no-repeat 0 0;
+	width: 300px;
+	height: 300px;
+	margin-right: -250px;
+	display: none;
+}
+
+.anxious.show{
+	display: block;
+}
+
+.excited{
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	background: url('../img/excited.png') no-repeat 0 0;
+	width: 300px;
+	height: 300px;
+	margin-left: -250px;
+	display: none;
+}
+
+.excited.show{
+	display: block;
 }
 
 .rocket{
 	/*Absolute means the object places itself according to the parent; in this case, the right panel*/
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: blue;
+	bottom: -40px;
+	width: 300px;
+	margin-left: -150px;
+	height: 300px;
+	background: url('../img/state1.png') no-repeat 0 0;
 	transition: bottom 10000ms;
 }
+
+/*change rocket bg img*/
+body.body-state2 .rocket{
+	background-image: url('../img/state2.gif');
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/state3.gif');
+}
+
+body.body-state5 .rocket{
+	background-image: url('../img/boom.gif');
+	bottom: 0px;
+}
+/*end of BG change*/
 
 body.body-state1 .rocket{
 	transition: none;
